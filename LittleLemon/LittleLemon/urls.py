@@ -23,4 +23,6 @@ urlpatterns = [
     path('api/',include('restaurant.urls')),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('restaurant/booking/tables', views.BookingViewSet.as_view({'get':'list'})),
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.authtoken')),
 ]
